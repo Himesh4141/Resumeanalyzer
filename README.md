@@ -1,50 +1,12 @@
-SkillSync Engine
-A high-fidelity, dark-mode resume parsing and skill-gap assessment platform. Built on top of Streamlit using a bespoke, minimalist HTML5/JS interface that mimics modern design patterns seen in production platforms like Linear and Vercel.
-
-Architecture & Design Philosophy
-Rather than relying on generic out-of-the-box component styling, this application injects a custom-tailored document fragment into the page, bypassing Streamlit’s standard UI blocks.
-
-Bento Grid Layout: Clean, structured micro-cards prioritizing readability and spatial symmetry.
-
-Luxury Micro-Interactions: Subtle hover states and zero-latency border transformations that activate contextually.
-
-Asynchronous Shutter Loading: High-fidelity transition states built using CSS transitions for an interactive, responsive feel.
-
-Features
-Candidate Parser: Upload standard .txt resume files and capture raw credentials.
-
-Requirement Profiler: Input target roles, framework specifications, or raw job descriptions.
-
-Dynamic Skill-Mapping Matrix: Instantly compares standard technical skills to flag overlaps and missing modules.
-
-Interactive Action Links: Auto-generates customized external upskilling paths for identified core gaps.
-
-Technical Stack
-Framework: Streamlit (Python 3.10+)
-
-Runtime Component: Streamlit Custom HTML Component (v1)
-
-UI Architecture: Custom HTML5, CSS3 Variables, ES6 JavaScript
-
-Fonts: Inter & JetBrains Mono (Via Google Fonts API)
-
-Quick Start
-1. Prerequisites
-Ensure you have Python installed on your system.
-
-Bash
-python --version
-2. Installation
-Clone the workspace and install the single dependency required to boot the Streamlit container:
-
-Bash
-pip install streamlit
-3. Run the App
-Execute the Streamlit runtime directly from your terminal:
-
-Bash
-streamlit run app.py
-File Structure
-Plaintext
-├── app.py              # Main Streamlit driver file with UI injection
-└── README.md           # Documentation & Architecture overview
+🌌 SkillSync EngineThe minimalist, high-fidelity skill-gap assessment platform.Built with Python and styled like modern tools like Linear and Vercel, SkillSync bypasses boring default dashboards to deliver a clean, interactive, dark-mode experience.⚡ Quick Glance🎨 Design⚙️ Core Engine📦 DependencyMinimal Bento GridClient-Side JS Parsingstreamlit🚀 Key Features📁 Fluid Drag-and-Drop — Instant resume parsing directly from raw text files.🪐 Requirement Profiling — Paste job descriptions to instantly set the target framework baseline.🎯 Dynamic Gap Matrix — Instant, visual match percentages with sharp green/red breakdown blocks.🚀 Quick Upskill Links — Dynamic training links are generated on-the-fly for any missing skills.🛠️ Tech Stack & ArchitectureTo achieve this modern, lag-free look, we bypassed Streamlit's default templates and embedded a raw HTML5 / CSS3 / ES6 Javascript engine inside a Streamlit web component.       [ Streamlit Python Host ]
+                  │
+        ( CSS Custom Inject )
+                  │
+        ┌─────────┴─────────┐
+        ▼                   ▼
+ [ UI Bento Grid ]   [ JS Matching Logic ]
+🚦 Getting Started (Beginner-Friendly)If you are new to coding, follow these simple steps to get the app running on your computer in less than two minutes.Step 1: Install PythonMake sure you have Python installed. You can check by opening your computer's terminal (or Command Prompt) and typing:Bashpython --version
+(If it shows a version number like Python 3.10.x or higher, you are good to go!)Step 2: Install StreamlitInstall the only framework needed to run our interface:Bashpip install streamlit
+Step 3: Launch the EngineCreate a file named app.py and paste the main Python code inside it. Then, run this command in your terminal:Bashstreamlit run app.py
+🎉 A local web page will automatically pop open in your browser!📈 How It Works Under the HoodInput Stage 📥: The interface takes your uploaded resume and parses the raw text contents.Analysis Stage 🧠: The algorithm isolates core technical keywords (like Python, SQL, AWS, Machine Learning, and more) from both the job description and your resume.Alignment Stage ⚖️: It calculates a Compatibility Index:$$\text{Match \%} = \left( \frac{\text{Skills Matched}}{\text{Total Required Skills}} \right) \times 100$$Action Stage ⚡: It displays matched skills in clean Verified cards and highlights gaps with direct paths to learn those specific technologies.📂 Project StructurePlaintext├── app.py          # 🧠 Python script containing the embedded web dashboard
+└── README.md       # 📖 Documentation & Setup Guide
